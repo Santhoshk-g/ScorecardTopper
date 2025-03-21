@@ -1,0 +1,22 @@
+<template>
+    <template for:each={adata} for:item="userdata">
+    <lightning-card key={userdata.UserName} icon-name="utility:opportunity"  title={areatype}>
+      <lightning-layout multiple-rows>
+        <lightning-layout-item size="4" padding="around-small">
+          <div class="slds-p-around_medium slds-text-align_center">
+            <img src={userdata.Picture} alt="Avatar" style="border-radius: 20%" />
+          </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="8" padding="around-small">
+          <div class="slds-p-around_medium" style="font-size: large">
+            <b> Name   </b>    : {userdata.UserName}<br />
+           <b> Sales Score</b> : {userdata.Score}<br />
+           <b> Sales Area </b> : {userdata.UserSalesArea}<br />
+           <b> Area Type  </b> : {userdata.UserAreaType}<br />
+           <b> Email      </b> : {userdata.UserEmail}<br />
+          </div>
+        </lightning-layout-item>
+      </lightning-layout>
+    </lightning-card></template>
+  </template>
+  
